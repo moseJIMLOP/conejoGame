@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+h1 { color: #333; }
+#gameArea {
+    width: 600px;
+    height: 200px;
+    border-bottom: 4px solid #8B4513;
+    background-color: #e0f7fa;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+#rabbit {
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+.jump {
+    animation: jumpAnim 0.5s linear;
+}
+@keyframes jumpAnim {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+#obstacle {
+    width: 30px;
+    height: 35px;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+}
+.blockMove {
+    animation: blockAnim 1.5s infinite linear;
+}
+@keyframes blockAnim {
+    0% { right: -40px; }
+    100% { right: 640px; }
+}
+#gameOverScreen {
+    display: none;
+    margin-top: 20px;
+}
+.btn {
+    background-color: #ebacd4;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+.btn:hover { background-color: #431a3a; }
+.btn-retry { background-color: #ce8ef3; }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hehehe</title>
+    <meta name="description" content="Confirmacion del viaje a Oaxaca">
+    <meta name="author" content="Moseley Jimenez">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css" >
+
+</head>
+<body>
+    <h1>🐰 ¡Ayuda al conejo a saltar los obstáculos! 🥕</h1>
+
+    <p>Presiona la <strong>Barra Espaciadora</strong> o haz <strong>Clic en la pantalla</strong> para saltar.</p>
+
+    <p id="score">Obstáculos: 0 / 10</p>
+
+    <div id="gameArea" onclick="jump()">
+        <div id="rabbit">🐰</div>
+        <div id="obstacle" class="blockMove">🥕</div>
+    </div>
+
+    <div id="gameOverScreen">
+        <h2>Fin!! Perdiste.</h2>
+        <p>click a la siguiente URL</p>
+
+        <a href="https://forms.gle/DRoFUXemqxuz6JNUA" target="_blank" class="btn">click aqui 💀</a>
+        <br>
+        <button class="btn btn-retry" onclick="resetGame()">Try again 😊</button>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+
+</body>
+</html>

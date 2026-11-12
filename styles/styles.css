@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f8ff;
@@ -64,3 +64,239 @@ h1 { color: #333; }
 }
 .btn:hover { background-color: #431a3a; }
 .btn-retry { background-color: #ce8ef3; }
+
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #eee5ff;
+    font-family: 'Nunito', Nunito;
+    text-align: center;
+    color: #032071;
+}
+
+#gameContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #770aa5;
+    font-size: 32px;
+}
+
+p {
+    font-size: 17px;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 20px;
+    color: #8b11ef;
+    margin: 20px;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+#scene {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* BOTONES DE PRUEBA */
+
+.dog {
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 12%;
+    background-color: transparent;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* POSICIONES */
+
+#dog1 {
+    left: 86%;
+    top: 30%;
+}
+
+#dog2 {
+    left: 66%;
+    top: 50%;
+}
+
+#dog3 {
+    left: 38%;
+    top: 50%;
+}
+
+#dog4 {
+    left: 20%;
+    top: 10%;
+}
+
+#dog5 {
+    left: 40%;
+    top: 80%;
+}
+
+.dog.found {
+    background-color: rgba(246, 226, 10, 0.468);
+}
+
+/* PANTALLA NEGRA */
+
+#gameOverScreen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOverScreen a {
+    color: #d9b8ff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* BURBUJITAS DE FONDO */
+
+.bubbles {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -100px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    animation: float 12s infinite linear;
+}
+
+/* Diferentes posiciones y tamaños */
+
+.bubbles span:nth-child(1) {
+    left: 10%;
+    animation-duration: 9s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 25%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 12s;
+}
+
+.bubbles span:nth-child(3) {
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 15s;
+}
+
+.bubbles span:nth-child(4) {
+    left: 55%;
+    animation-duration: 10s;
+}
+
+.bubbles span:nth-child(5) {
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 13s;
+}
+
+.bubbles span:nth-child(6) {
+    left: 85%;
+    width: 45px;
+    height: 45px;
+    animation-duration: 16s;
+}
+
+.bubbles span:nth-child(7) {
+    left: 95%;
+    animation-duration: 11s;
+}
+
+.bubbles span:nth-child(8) {
+    left: 5%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 14s;
+}
+
+.bubbles span:nth-child(9) {
+    left: 60%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 8s;
+}
+
+.bubbles span:nth-child(10) {
+    left: 35%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 17s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) translateX(40px);
+        opacity: 0;
+    }
+}
+
+#gameContainer {
+    position: relative;
+    z-index: 1;
+}

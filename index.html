@@ -1,38 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hehehe</title>
-    <meta name="description" content="Confirmacion del viaje a Oaxaca">
+
+    <title>Find the 5 Doggies 🐶</title>
+
+    <meta name="description" content="Find the five hidden doggies!">
     <meta name="author" content="Moseley Jimenez">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css" >
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
+
 <body>
-    <h1>🐰 ¡Ayuda al conejo a saltar los obstáculos! 🥕</h1>
 
-    <p>Presiona la <strong>Barra Espaciadora</strong> o haz <strong>Clic en la pantalla</strong> para saltar.</p>
+    <main id="gameContainer">
 
-    <p id="score">Obstáculos: 0 / 10</p>
+        <h1>🕵️🔎la busqueda de cosas :D!</h1>
 
-    <div id="gameArea" onclick="jump()">
-        <div id="rabbit">🐰</div>
-        <div id="obstacle" class="blockMove">🥕</div>
-    </div>
+        <p>
+            ¡Debes encontrar: 
+            una almohada, 2 matrioscas de gatitos, 
+            una brocheta de camaron, un gatito con gorrito y
+            un pezcado!</h1>
+
+        </p>
+
+        <p id="score">
+            Cosas encontradas: 0 / 5
+        </p>
+
+        <!-- Área del juego -->
+
+        <div id="gameArea">
+
+            <!-- Imagen de la habitación -->
+
+            <img
+                src="images/download.jpg"
+                id="scene"
+                alt="Habitación con cinco perritos escondidos"
+            >
+
+            <!-- Zonas secretas de los perritos -->
+
+            <button class="dog" id="dog1" aria-label="Perrito 1"></button>
+
+            <button class="dog" id="dog2" aria-label="Perrito 2"></button>
+
+            <button class="dog" id="dog3" aria-label="Perrito 3"></button>
+
+            <button class="dog" id="dog4" aria-label="Perrito 4"></button>
+
+            <button class="dog" id="dog5" aria-label="Perrito 5"></button>
+
+        </div>
+
+        <div class="bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </main>
+
+
+    <!-- Pantalla final -->
 
     <div id="gameOverScreen">
-        <h2>Fin!! Perdiste.</h2>
-        <p>Solo los ganadores pueden acceder a este link.</p>
 
-        <a href="https://forms.gle/DRoFUXemqxuz6JNUA" target="_blank" class="btn">click aqui 💀</a>
-        <br>
-        <button class="btn btn-retry" onclick="resetGame()">Try again 😊</button>
+        <a href="invitation.html" target="_blank">
+            YEIII open the invitation ♡
+        </a>
+
     </div>
+
+
+    <!-- JavaScript -->
 
     <script src="scripts/scripts.js"></script>
 
 </body>
+
 </html>
+
